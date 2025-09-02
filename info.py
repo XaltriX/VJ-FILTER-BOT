@@ -115,8 +115,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://big-alyss-neonghost-a0fcb90e.koyeb.app/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://big-alyss-neonghost-a0fcb90e.koyeb.app/".format(FQDN, PORT)
+URL = "https://git.heroku.com/movie-master-bot.git".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://git.heroku.com/movie-master-bot.git".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -131,9 +131,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://big-alyss-neonghost-a0fcb90e.koyeb.app/".format(FQDN)
+    URL = "https://git.heroku.com/movie-master-bot.git".format(FQDN)
 else:
-    URL = "https://big-alyss-neonghost-a0fcb90e.koyeb.app/".format(FQDN)
+    URL = "https://git.heroku.com/movie-master-bot.git".format(FQDN)
 
 
 
@@ -150,3 +150,4 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
 # Don't Remove Credit @i_am_yamraj
 # Ask Doubt on telegram @i_am_yamraj
+
